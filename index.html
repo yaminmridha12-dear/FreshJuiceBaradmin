@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Juice Bar Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🍹 Fresh Juice Bar</h1>
+    <p>Manager Dashboard</p>
+  </header>
+
+  <main>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Today's Sales</h3>
+        <p id="todaySales">৳0</p>
+      </div>
+
+      <div class="card">
+        <h3>Products</h3>
+        <p id="productCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Total Orders</h3>
+        <p id="orderCount">0</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>➕ Add Product</h2>
+
+      <input id="productName" type="text" placeholder="Juice name">
+      <input id="productPrice" type="number" placeholder="Price">
+      <input id="productStock" type="number" placeholder="Stock">
+
+      <button onclick="addProduct()">Add Product</button>
+    </section>
+
+    <section class="panel">
+      <h2>🧃 Products</h2>
+
+      <div id="productList"></div>
+    </section>
+
+    <section class="panel">
+      <h2>💰 Make Sale</h2>
+
+      <select id="saleProduct"></select>
+
+      <input id="saleQuantity" type="number" min="1" value="1">
+
+      <button onclick="makeSale()">Sell</button>
+
+      <p id="saleMessage"></p>
+    </section>
+
+    <section class="panel">
+      <h2>📊 Sales History</h2>
+
+      <div id="salesList"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
